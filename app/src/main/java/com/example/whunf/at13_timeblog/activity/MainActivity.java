@@ -38,12 +38,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+     //这里设置为严格模式，允许在主线程进行网络操作
         StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll()
                 .build();
         StrictMode.setThreadPolicy(threadPolicy);
 
-        context=this;
+        context = this;
         initView();
         initData();
         setListener();
@@ -103,13 +103,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tab_article:
-                viewPager.setCurrentItem(0,true);
+                viewPager.setCurrentItem(0, true);
                 break;
             case R.id.tab_square:
-                viewPager.setCurrentItem(1,true);
+                viewPager.setCurrentItem(1, true);
                 break;
             case R.id.tab_me:
-                viewPager.setCurrentItem(2,true);
+                viewPager.setCurrentItem(2, true);
                 break;
             default:
                 break;
