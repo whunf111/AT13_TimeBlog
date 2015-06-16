@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="60dip"
+              android:gravity="center_vertical"
+              android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="60dip"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingBottom="3dip"
+        android:paddingTop="3dip" >
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:singleLine="true"
+            android:text="帖子标题"
+            android:textColor="#ffff0000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/item_count"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical|right"
+            android:singleLine="true"
+            android:text="回复数" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_line"
+        android:layout_width="18dip"
+        android:layout_height="60dip"
+        android:background="@drawable/article_divider_1" />
+
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:src="@drawable/user" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="60dip"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="3dip"
+        android:paddingTop="3dip" >
+
+        <TextView
+            android:id="@+id/item_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textColor="#ffff0000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+            android:padding="3dip"
+            android:text="14/10/15 20:08" />
+    </LinearLayout>
+
+</LinearLayout>

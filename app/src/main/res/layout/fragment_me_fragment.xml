@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:background="#eee"
+             android:layout_height="match_parent" >
+
+    <TextView
+        style="@style/tv_title"
+        android:text="个人主页" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip" >
+
+        <ImageView
+            android:id="@+id/ic_bg_layer"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_background" />
+
+        <ImageView
+            android:id="@+id/im_icon"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_below="@id/ic_bg_layer"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="-30dip"
+            android:background="@drawable/icon_bg"
+            android:src="@drawable/user" />
+
+        <EditText
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ic_bg_layer"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="5dip"
+            android:layout_toRightOf="@id/im_icon"
+            android:background="@null"
+            android:enabled="false"
+            android:text="用户名"
+            android:textColor="#ff333333"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_user_name"
+            android:layout_below="@id/tv_user_name"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:text="未知昵称"
+                android:textColor="#ff666666" />
+
+            <View
+                android:layout_width="2dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:background="#FF999999" />
+
+            <EditText
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:text="未知性别"
+                android:textColor="#ff666666" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#55999999" />
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="90dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dip"
+            android:text="账号"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/tv_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:textColor="#ff333333" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#55999999" />
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="90dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dip"
+            android:textColor="#000"
+            android:text="电话"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:enabled="false"
+            android:inputType="phone"
+            android:textColor="#ff333333" />
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#55999999" />
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="90dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dip"
+            android:textColor="#000"
+            android:text="生日"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff333333"
+            android:textSize="18sp" />
+    </TableRow>
+
+</TableLayout>

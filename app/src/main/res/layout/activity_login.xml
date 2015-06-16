@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/t_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_left" />
+
+    <TextView
+        android:id="@+id/t_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/t_left"
+        android:background="@drawable/top_right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_toRightOf="@id/t_left"
+        android:text="用户登录"
+        android:textColor="#ffffffff"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t_left"
+        android:layout_toRightOf="@id/t_left"
+        android:background="@drawable/line" />
+
+    <TextView
+        android:id="@+id/circle_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/line"
+        android:layout_below="@id/t_left"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/circle" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/circle_1"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/circle_1"
+        android:singleLine="true"
+        android:background="@drawable/et_bg"
+        android:ems="20"
+        android:hint="用户名"
+        android:textColor="#ffff0000" />
+
+    <TextView
+        android:id="@+id/circle_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/line"
+        android:layout_below="@id/circle_1"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/circle" />
+
+    <EditText
+        android:id="@+id/et_psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_alignBottom="@id/circle_2"
+        android:layout_alignLeft="@id/et_name"
+        android:background="@drawable/et_bg"
+        android:password="true"
+        android:ems="20"
+        android:hint="密码"
+        android:textColor="#ffff0000" />
+
+    <Button
+        android:id="@+id/m_login"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignRight="@id/line"
+        android:layout_below="@id/circle_2"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/login_btn_bg"
+        android:text="登录"
+        android:textColor="#ffffffff"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/circle_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/line"
+        android:layout_below="@id/m_login"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/m_regist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/circle_3"
+        android:layout_alignLeft="@id/et_name"
+        android:text="注册新用户"
+        android:textSize="18sp"
+        android:textColor="#ffff0000" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="m_tab">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">45dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/tab_bg</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tv_title">
+        <item name="android:textColor">@color/title_text_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/title_bg</item>
+    </style>
+</resources>

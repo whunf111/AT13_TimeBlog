@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:orientation="horizontal" >
+    <FrameLayout
+    android:id="@+id/fragment_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/m_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/m_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <RadioGroup
+            android:id="@+id/tab_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF99CCFF"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/tab_article"
+                style="@style/m_tab"
+                android:layout_marginRight="1dip"
+                android:text="贴吧" />
+
+            <RadioButton
+                android:id="@+id/tab_square"
+                style="@style/m_tab"
+                android:layout_marginRight="1dip"
+                android:text="广场" />
+
+            <RadioButton
+                android:id="@+id/tab_me"
+                style="@style/m_tab"
+                android:checked="true"
+                android:text="我" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>
