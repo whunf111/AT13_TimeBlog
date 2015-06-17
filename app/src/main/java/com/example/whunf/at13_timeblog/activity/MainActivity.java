@@ -22,6 +22,7 @@ import com.example.whunf.at13_timeblog.fragment.ArticalMain_Fragment;
 import com.example.whunf.at13_timeblog.fragment.Me_fragment;
 import com.example.whunf.at13_timeblog.fragment.Setting_Fragment;
 import com.example.whunf.at13_timeblog.fragment.Squar_Fragment;
+import com.example.whunf.at13_timeblog.model.Artical;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 
@@ -38,7 +39,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-     //这里设置为严格模式，允许在主线程进行网络操作
+        //这里设置为严格模式，允许在主线程进行网络操作
         StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll()
                 .build();
         StrictMode.setThreadPolicy(threadPolicy);
@@ -74,6 +75,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         );
 
+
     }
 
     private void setListener() {
@@ -85,6 +87,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private void initData() {
         fragments = new Fragment[4];
         fragments[0] = new ArticalMain_Fragment(this);
+        ((ArticalMain_Fragment) fragments[0]).setOnArticalItemclick(oaic);
         fragments[1] = new Squar_Fragment();
         fragments[2] = new Me_fragment(context);
         fragments[3] = new Setting_Fragment();
@@ -115,4 +118,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 break;
         }
     }
+
+    ArticalMain_Fragment.OnArticalItemclick oaic = new ArticalMain_Fragment.OnArticalItemclick() {
+        @Override
+        public void onClick(Artical artical) {
+
+        }
+    };
+
+
 }

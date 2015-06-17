@@ -43,6 +43,7 @@ public class ArticalMain_Fragment extends Fragment implements View.OnClickListen
     ListView lv;
     Context context;
     List<Artical> articalList;
+    OnArticalItemclick oaic;
 
     public ArticalMain_Fragment() {
         // Required empty public constructor
@@ -54,7 +55,9 @@ public class ArticalMain_Fragment extends Fragment implements View.OnClickListen
         this.context=context;
     }
 
-
+    public void setOnArticalItemclick(OnArticalItemclick oaic){
+        this.oaic=oaic;
+    }
 
 
     @Override
@@ -76,11 +79,9 @@ public class ArticalMain_Fragment extends Fragment implements View.OnClickListen
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(context,position+"",Toast.LENGTH_SHORT).show();
+                oaic.onClick(articalList.get(position));
             }
         });
-
-
     }
 
     private void initData() {
@@ -140,4 +141,11 @@ public class ArticalMain_Fragment extends Fragment implements View.OnClickListen
         }
 
     }
+
+    public interface OnArticalItemclick {
+        void onClick(Artical artical);
+    }
+
+
+
 }
