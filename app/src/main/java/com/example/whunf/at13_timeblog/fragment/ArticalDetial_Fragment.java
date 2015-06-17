@@ -56,6 +56,7 @@ public class ArticalDetial_Fragment extends Fragment implements View.OnClickList
         tv2.setOnClickListener(this);
         tv7.setOnClickListener(this);
         tv6.setText("333");
+        tv7.setText("444");
     }
 
     private void initView() {
