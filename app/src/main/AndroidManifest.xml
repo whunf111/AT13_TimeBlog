@@ -43,6 +43,10 @@
             android:name=".activity.PublishArtical"
             android:label="@string/title_activity_publish_artical" >
         </activity>
+        <activity
+            android:name=".activity.ReplyActivity"
+            android:label="@string/title_activity_reply" >
+        </activity>
     </application>
 
 </manifest>
